@@ -13,7 +13,7 @@ Hubungkan semua port bersama-sama mengikuti skema di bawah ini. Kemudian hubungk
 
 ### Langkah 2 :
 
-Dillinger is currently extended with the following plugins.
+Dillinger is currently extended with the following plugins
 Instructions on how to use them in your own application are linked below.
 
 | Plugin | README |
