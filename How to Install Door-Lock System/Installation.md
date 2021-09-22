@@ -7,7 +7,7 @@ Powered By FOSTI UMS
 ## Installation
 Langkah 1: Mulailah dengan menghubungkan semua bersama-sama mengikuti skema di bawah ini. Dan kemudian hubungkan NodeMCU Anda ke PC Anda melalui kabel USB. 
 
-![](assets/1.jpg)
+![]("assets/1.jpeg")
 
 ```sh
 cd dillinger
