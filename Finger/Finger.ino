@@ -1,18 +1,29 @@
 #include <Adafruit_Fingerprint.h>
 #include <SoftwareSerial.h>
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h>
+#include <ESP8266WebServer.h>
+
 
 //Fingerprint scanner Pins
 #define Finger_Rx 14 //D5
 #define Finger_Tx 12 //D6
+
+const char* ssid = "fosti";
+const char* password = "00000000";
+
+ESP8266WebServer server(80);
 
 SoftwareSerial mySerial(Finger_Rx, Finger_Tx);
 Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
 
 int FingerID = 0;     // The Fingerprint ID from the scanner 
 uint8_t id;
-
+bool lampu_on = true;
 void setup(){
   Serial.begin(115200);
+   pinMode(LED_BUILTIN, OUTPUT);
+   
     // set the data rate for the sensor serial port
   finger.begin(57600);
   Serial.println("\n\nAdafruit finger detect test");
@@ -23,10 +34,46 @@ void setup(){
     Serial.println("Did not find fingerprint sensor :(");
     while (1) { delay(1); }
   }
+
+  Serial.print("Setting AP (Access Point)…");
+  // Remove the password parameter, if you want the AP (Access Point) to be open
+ WiFi.mode(WIFI_AP);  
+ WiFi.softAP(ssid, password);
+ IPAddress myIP = WiFi.softAPIP();
+ 
+   Serial.print(myIP);
+
+
+ 
+  // Start the server
+
+  server.on("/", [](){
+    server.send(200, "text/html", "<a type='button' href='/enrollmode'>Enroll</a>");
+    
+  });
+  server.on("/enrollmodeon", [](){
+    server.send(200, "text/plain", "MODE ENROLL ON");
+    
+      digitalWrite(LED_BUILTIN, HIGH);
+
+    
+  });
+    server.on("/enrollmodeoff", [](){
+    server.send(200, "text/plain", "MODE ENROLL ON");
+      digitalWrite(LED_BUILTIN, LOW);
+
+
+    
+  });
+  server.begin();
+  Serial.println("Server started");
+
+
 }
 
 void loop()                     // run over and over again
 {
+  server.handleClient();
   getFingerprintID();
   delay(50);            //don't ned to run this at full speed.
 }
