@@ -9,7 +9,7 @@
 #define Finger_Rx 14 //D5
 #define Finger_Tx 12 //D6
 
-const char* ssid = "fosti";
+const char* ssid = "nodemcu";
 const char* password = "00000000";
 
 ESP8266WebServer server(80);
@@ -23,11 +23,10 @@ bool lampu_on = true;
 void setup(){
   Serial.begin(115200);
    pinMode(LED_BUILTIN, OUTPUT);
-   
     // set the data rate for the sensor serial port
   finger.begin(57600);
   Serial.println("\n\nAdafruit finger detect test");
-   
+  digitalWrite(LED_BUILTIN, HIGH); 
   if (finger.verifyPassword()) {
     Serial.println("Found fingerprint sensor!");
   } else {
@@ -46,21 +45,24 @@ void setup(){
 
  
   // Start the server
-
+  
   server.on("/", [](){
-    server.send(200, "text/html", "<a type='button' href='/enrollmode'>Enroll</a>");
-    
+    server.send(200, "text/html", "Home Fingerprint FOSTI<br><br>"
+    "<a type='button' href='/enrollmodeon'>Enroll</a>");
+    digitalWrite(LED_BUILTIN, HIGH); 
   });
-  server.on("/enrollmodeon", [](){
-    server.send(200, "text/plain", "MODE ENROLL ON");
-    
-      digitalWrite(LED_BUILTIN, HIGH);
+    server.on("/enrollmodeon", [](){
+      server.send(200, "text/html", "MODE ENROLL ON<br><br>"
+      "<a type='button' href='/enrollmodeoff'>Enroll Off</a><br><br>"
+      "<a type='button' href='/'>Back</a><br>");
+      digitalWrite(LED_BUILTIN, LOW);
 
     
   });
     server.on("/enrollmodeoff", [](){
-    server.send(200, "text/plain", "MODE ENROLL ON");
-      digitalWrite(LED_BUILTIN, LOW);
+      server.send(200, "text/html", "MODE ENROLL OFF<br><br>"
+      "<a type='button' href='/'>Back</a>");
+      digitalWrite(LED_BUILTIN, HIGH);
 
 
     
