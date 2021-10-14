@@ -22,12 +22,12 @@ Menginstall software yang dibutuhkan pada perangkat komputer ;
 2. VisualCodeStudio/text editor lainnya
 
 ### Langkah 2 :
-Menghubungkan semua port mengikuti skema di bawah ini. 
+Menghubungkan semua port mengikuti skema di bawah ini
 
 ![](https://raw.githubusercontent.com/imaana/door-lock/main/assets/picture1.jpeg)
 
 ### Langkah 3 :
-Menghubungkan NodeMCU yang sudah dihubungkan ke semua port ke PC melalui kabel USB. 
+Menghubungkan NodeMCU yang sudah dihubungkan ke semua port ke PC melalui kabel USB
 
 ![](https://raw.githubusercontent.com/imaana/door-lock/main/assets/picture2.jpeg)
 
