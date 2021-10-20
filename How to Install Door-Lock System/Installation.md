@@ -8,7 +8,7 @@ Powered By FOSTI UMS
 ### Langkah 1 :
 Menyiapkan alat dan bahan ;
 Bahan :
-1. Modul NodeMCU ESP8266
+1. Modul NodeMCU ESP8266 
 2. Kabel Jumper
 3. Modul Fingerprint
 
@@ -18,8 +18,8 @@ Alat :
 3. Breadboard
 
 Menginstall software yang dibutuhkan pada perangkat komputer ;
-1. Adafruit
-2. VisualCodeStudio/text editor lainnya
+1. VisualCodeStudio/text editor lainnya
+2. Ekstensi platform io
 
 ### Langkah 2 :
 Menghubungkan semua port mengikuti skema di bawah ini
@@ -31,21 +31,29 @@ Menghubungkan NodeMCU yang sudah dihubungkan ke semua port ke PC melalui kabel U
 
 ![](https://raw.githubusercontent.com/imaana/door-lock/main/assets/picture2.jpeg)
 
-Membuka software Adafruit
+### Langkah 4 :
+- Membuka software VisualCodeStudio/text editor lainnya
+- Menginstall ekstensi platform io
+- Membuka platform io
+- Membuat project baru pada platform io
 
+Menginstall modul-modul dibawah ini :
+1. Arduino
+2. ESP8266WiFi
+3. SoftwareSerial
+4. WiFiClient
+5. ESP8266WebServer
+6. Adafruit_Fingerprint
+7. SPI
+8. SD
+9. ArduinoJson
 
+Salin kode pada file src/main.cpp
+![](https://raw.githubusercontent.com/imaana/door-lock/main/assets/picture4.jpeg)
 
-Dillinger is currently extended with the following plugins
-Instructions on how to use them in your own application are linked below.
+![](https://raw.githubusercontent.com/imaana/door-lock/main/assets/picture5.jpeg)
 
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+![](https://raw.githubusercontent.com/imaana/door-lock/main/assets/picture6.jpeg)
 
 
 > Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
