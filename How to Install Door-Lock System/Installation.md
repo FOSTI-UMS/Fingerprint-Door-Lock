@@ -19,7 +19,7 @@ Alat :
 
 Menginstall software yang dibutuhkan pada perangkat komputer ;
 1. VisualCodeStudio/text editor lainnya
-2. Ekstensi platform io
+2. Ekstensi platform io (pada VisualCodeStudio)
 
 ### Langkah 2 :
 Menghubungkan semua port mengikuti skema di bawah ini
