@@ -8,7 +8,7 @@ Project ini merupakan sistem pengunci pintu yang menggunakan fingerprint dan dil
 - How to Install Door-Lock System
 - How to Use Door-Lock System
 
-# Our Tim
+# Our Team
 * Shafa Bani Saputra<br>
 * Dandun Gigih Prakoso<br>
 * Afifah Ghaisani Imana<br>
