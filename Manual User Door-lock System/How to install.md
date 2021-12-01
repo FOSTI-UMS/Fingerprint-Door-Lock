@@ -2,7 +2,7 @@
 
 Powered By FOSTI UMS
 
-✨ Door lock system with fingerprint✨  
+✨ Door-lock system with fingerprint✨  
 
 ## Installation
 ### Langkah 1 :
