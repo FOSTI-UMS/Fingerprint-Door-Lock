@@ -1,5 +1,5 @@
 # Door-Lock System
-System pengunci pintu dengan fingerprint
+System pengunci pintu dengan Fingerprint
 
 # Description
 Project ini merupakan sistem pengunci pintu yang menggunakan teknologi fingerprint, sistem ini memberikan tingkat keamanan yang lebih optimal karena setiap orang memiliki sidik jari yang berbeda sehingga hanya orang yang terdaftar yang dapat mengakses, dan juga mencegah terjadinya pembobolan juga memberikan kesan yang lebih modern tentunya. 
