@@ -48,7 +48,7 @@ Menginstall modul-modul dibawah ini :
 8. SD
 9. ArduinoJson
 
-Salin kode pada file src/main.cpp
+Salin kode pada file <a href="https://github.com/FOSTI-UMS/door-lock/blob/main/src/main.cpp">src/main.cpp</a>
 
 ![](https://raw.githubusercontent.com/imaana/door-lock/main/assets/picture4.jpeg)
 
