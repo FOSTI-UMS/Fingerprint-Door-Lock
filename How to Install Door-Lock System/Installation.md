@@ -64,4 +64,5 @@ Salin kode pada file src/main.cpp
 
 MIT
 
-**Free Software, Hell Yeah!**
+**FOSTI UMS 2021**
+
