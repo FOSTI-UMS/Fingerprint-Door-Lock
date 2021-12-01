@@ -2,7 +2,7 @@
 
 Powered By FOSTI UMS
 
-✨ Door lock system with fingerprint and RFID (Radio-frequency identification)✨  
+✨ Door lock system with fingerprint✨  
 
 ## Installation
 ### Langkah 1 :
@@ -64,4 +64,5 @@ Salin kode pada file src/main.cpp
 
 MIT
 
-**Free Software, Hell Yeah!**
+**FOSTI UMS 2021**
+
